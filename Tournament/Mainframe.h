@@ -87,6 +87,7 @@ private:
 	void BindHeaderControls();
 	void BindPlayerControls();
 	void BindTeamControls();
+	void BindTournamentControls();
 
 	// Style
 	void StyleHeader();

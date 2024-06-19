@@ -142,8 +142,7 @@ void Mainframe::BindControls() {
 	BindHeaderControls();
 	BindPlayerControls();
 	BindTeamControls();
-	
-	create_bracket_button->Bind(wxEVT_BUTTON, &Mainframe::OnCreateBracket, this);
+	BindTournamentControls();
 
 }
 void Mainframe::BindHeaderControls() {
@@ -161,6 +160,10 @@ void Mainframe::BindPlayerControls() {
 void Mainframe::BindTeamControls() {
 	team_add_button->Bind(wxEVT_BUTTON, &Mainframe::OnAddTeam, this);
 	team_name_entry->Bind(wxEVT_TEXT_ENTER, &Mainframe::OnAddTeam, this);
+}
+void Mainframe::BindTournamentControls() {
+
+	create_bracket_button->Bind(wxEVT_BUTTON, &Mainframe::OnCreateBracket, this);
 }
 
 void Mainframe::OnHeadingClick(wxMouseEvent& evt) {
